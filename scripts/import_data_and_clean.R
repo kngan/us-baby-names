@@ -19,6 +19,7 @@ dt$name <- as.factor(dt$name)
 
 # import state data for mapping and merge abbreviations on
 all_states <- map_data("state")
+state_to_abbrev <- fread("state_to_abbrev.txt")
 all_states_w_abbrev <- merge(all_states, state_to_abbrev, by="region")
 
 # pick a name and a year and a gender
